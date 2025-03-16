@@ -59,7 +59,7 @@ def delete_friend(id):
         return jsonify({'error': str(e)}), 500
 
 #upadt friend
-@app.route('/api/friends/<int:id>', methods=['PUT'])
+@app.route('/api/friends/<int:id>', methods=['PATCH'])
 def update_friend(id):
     try:
         friend = Friend.query.get(id)
